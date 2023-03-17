@@ -18,34 +18,19 @@ for i in range(0, times):
     print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
     result = int(input("resultado: "))
     if operator == "+":
-        if result == number_1 + number_2:
-            print("Correcto!")
-            correct += 1
-        else:
-            print("Incorrecto!")
-            incorrect += 1
+        number_3 = number_1 + number_2
     elif operator == "-":
-        if result == number_1 - number_2:
-            print("Correcto!")
-            correct += 1
-        else:
-            print("Incorrecto!")
-            incorrect += 1
+        number_3 = number_1 - number_2
     elif operator == "*":
-        if result == number_1 * number_2:
-            print("Correcto!")
-            correct += 1
-        else:
-            print("Incorrecto")
-            incorrect += 1
+        number_3 = number_1 * number_2
     else:
-        if result == number_1 / number_2:
-            print("Correcto!")
-            correct += 1
-        else:
-            print("Incorrecto")
-            incorrect += 1                  
-    
+        number_3 = number_1 / number_2
+    if result == number_3:
+        correct += 1
+        print("Correcto!")
+    else:
+        incorrect += 1
+        print("Incorrecto!")    
             
 end_time = datetime.now()
 
